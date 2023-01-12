@@ -2,7 +2,6 @@
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/ekoukltd/s3-import-export.svg?style=flat-square)](https://packagist.org/packages/ekoukltd/laravel-import-export)
 [![Total Downloads](https://img.shields.io/packagist/dt/ekoukltd/s3-import-export.svg?style=flat-square)](https://packagist.org/packages/ekoukltd/laravel-import-export)
-![GitHub Actions](https://github.com/ekoukltd/s3-import-export/actions/workflows/main.yml/badge.svg)
 
 Ever needed to copy selected models between server environments?  Or seed a database with latest content?
 

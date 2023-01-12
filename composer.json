@@ -1,6 +1,6 @@
 {
     "name": "ekoukltd/s3-import-export",
-    "description": "Exports & Imports Tables to Local or S3 Storage",
+    "description": "Easy import & export of Laravel models (tables) to local or S3 Storage as a JSON file.  For when you don't want to restore a whole backup, just a few tables.",
     "keywords": [
         "ekoukltd",
         "s3-import-export",
