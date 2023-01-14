@@ -13,6 +13,11 @@ class S3IOServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+	
+	    $this->commands([
+		                    ExportCommand::class,
+		                    ImportCommand::class
+	                    ]);
 		
         if ($this->app->runningInConsole()) {
 			
@@ -22,10 +27,7 @@ class S3IOServiceProvider extends ServiceProvider
 			
 			
 	
-	        $this->commands([
-		                        ExportCommand::class,
-		                        ImportCommand::class
-	                        ]);
+
         }
     }
 
