@@ -84,7 +84,7 @@ class S3IO
 		$disk   = self::getDisk();
 		$fs     = Storage::disk($disk);
 		$output = new ConsoleOutput();
-		if($fs->put($filename, $json, 'private')) {
+		if($fs->put($filename, $json, config('s3-import-export.s3permission'))) {
 			$output->writeln("<info>$filename saved to $disk.</info>");
 		}
 		else {

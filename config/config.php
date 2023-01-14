@@ -15,8 +15,9 @@ return [
 		//Json object exports are ideal for copying content type data between environments, like pages, posts and templates
 		'App\\Models\\User',
 		
-		
 	],
+	//Set files as private by default. Can change to public if required.
+	's3permission' => 'private',
 	
 	//Carbon dates export with a timezone by default, which throws an error when importing to sql
 	//These fields will be changed to datetime:Y-m-d H:i:s on import
