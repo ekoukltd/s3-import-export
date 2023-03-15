@@ -74,7 +74,12 @@ class S3IO
 	 * @param $model
 	 */
 	private static function exportModel($model) {
-		if(!$json = DB::table(self::getTableNameFromModel($model))->get()->toJson()) {
+		
+		$columns = DB::getSchemaBuilder()->getColumnListing(self::getTableNameFromModel($model));
+		$excludeColumns = config('s3-import-export.excluded_columns')??[];
+		$selectedColumns = array_diff($columns, $excludeColumns);
+		
+		if(!$json = DB::table(self::getTableNameFromModel($model))->select($selectedColumns)->get()->toJson()) {
 			Log::emergency('Error Exporting Json Table');
 			return false;
 		}
